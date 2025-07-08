@@ -26,5 +26,8 @@ router.put("/:id", updateProduct);
 
 // (Tuỳ chọn) Xoá 1 sản phẩm
 router.delete("/:id", deleteProduct);
+// routes/productRoutes.js
+const { getProductBySlug } = require("../controllers/productController");
+router.get("/slug/:slug", getProductBySlug);
 
 module.exports = router;
